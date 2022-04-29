@@ -30,7 +30,7 @@ logging.basicConfig(level=config.LOG_LEVEL)
 """start"""
 
 
-@app.on_message(command(['start', 'help']))
+@app.on_message(command(['الاوامر', 'اوامري']))
 @language
 @handle_error
 async def start(_, message: Message, lang):
@@ -39,14 +39,14 @@ async def start(_, message: Message, lang):
 """ping"""
 
 
-@app.on_message(command('ping'))
+@app.on_message(command('بنك',"بنق"))
 async def ping(_, message: Message):
     await message.reply_text(f'`{await tgcalls.ping}ms`')
 
 """play"""
 
 
-@app.on_message(command(['play', 'p']) & filters.group)
+@app.on_message(command(['تشغيل']) & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -80,7 +80,7 @@ async def play(_, message: Message, lang):
 """"remote"""
 
 
-@app.on_message(command(['remote', 'stream']) & filters.group)
+@app.on_message(command(['بث']) & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -116,7 +116,7 @@ async def remote(_, message: Message, lang):
 """skip"""
 
 
-@app.on_message(command(['skip', 'next', 's', 'n']) & filters.group)
+@app.on_message(command(['تخطي', 'التالي', 'سكب']) & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -159,7 +159,7 @@ async def skip(_, message: Message, lang):
 """leave"""
 
 
-@app.on_message(command(['leave', 'l']) & filters.group)
+@app.on_message(command(['انهاء']) & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -177,7 +177,7 @@ async def leave(_, message: Message, lang):
 """queue"""
 
 
-@app.on_message(command('queue') & filters.group)
+@app.on_message(command('الانتظار') & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -194,7 +194,7 @@ async def queues(_, message: Message, lang):
 """shuffle"""
 
 
-@app.on_message(command('shuffle') & filters.group)
+@app.on_message(command('خلط') & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -212,7 +212,7 @@ async def shuffle(_, message: Message, lang):
 """now_playing"""
 
 
-@app.on_message(command(['now', 'np', 'now_playing']) & filters.group)
+@app.on_message(command(['الان']) & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -230,7 +230,7 @@ async def now_playing(_, message: Message, lang):
 """stream_mode"""
 
 
-@app.on_message(command(['stream_mode', 'mode', 'switch']) & filters.group)
+@app.on_message(command(['تحويل']) & filters.group)
 @register
 @language
 @check(admin=True, sudo=True)
@@ -249,7 +249,7 @@ async def stream_mode(_, message: Message, lang):
 """mute"""
 
 
-@app.on_message(command('mute') & filters.group)
+@app.on_message(command('كتم') & filters.group)
 @register
 @language
 @check(admin=True, sudo=True)
@@ -263,7 +263,7 @@ async def mute(_, message: Message, lang):
 """unmute"""
 
 
-@app.on_message(command('unmute') & filters.group)
+@app.on_message(command('الغاء الكتم') & filters.group)
 @register
 @language
 @check(admin=True, sudo=True)
@@ -277,7 +277,7 @@ async def unmute(_, message: Message, lang):
 """pause"""
 
 
-@app.on_message(command('pause') & filters.group)
+@app.on_message(command('ايقاف') & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -291,7 +291,7 @@ async def pause(_, message: Message, lang):
 """resume"""
 
 
-@app.on_message(command('resume') & filters.group)
+@app.on_message(command('استئناف') & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -305,7 +305,7 @@ async def resume(_, message: Message, lang):
 """loop"""
 
 
-@app.on_message(command('loop') & filters.group)
+@app.on_message(command('تكرار') & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -326,7 +326,7 @@ async def loop(_, message: Message, lang):
 """quiet"""
 
 
-@app.on_message(command('quiet') & filters.group)
+@app.on_message(command('هادئ') & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -345,7 +345,7 @@ async def quiet(_, message: Message, lang):
 """language"""
 
 
-@app.on_message(command(['language', 'lang']))
+@app.on_message(command(['اللغه', 'اللغة']))
 @register
 @language
 @check(admin=True, sudo=True)
@@ -370,7 +370,7 @@ async def set_lang(_, message: Message, lang):
 """add blacklist"""
 
 
-@app.on_message(command(['add_blacklist', 'addbl']) & filters.group)
+@app.on_message(command(['حظر']) & filters.group)
 @register
 @language
 @check(admin=True, sudo=True)
@@ -389,7 +389,7 @@ async def add_blacklist(_, message: Message, lang):
 """remove blacklist"""
 
 
-@app.on_message(command(['remove_blacklist', 'rmbl']) & filters.group)
+@app.on_message(command(['الغاء حظر']) & filters.group)
 @register
 @language
 @check(admin=True, sudo=True)
@@ -408,7 +408,7 @@ async def rm_blacklist(_, message: Message, lang):
 """get blacklist"""
 
 
-@app.on_message(command(['get_blacklist', 'getbl']) & filters.group)
+@app.on_message(command(['المحظورين']) & filters.group)
 @register
 @language
 @check(admin=True, sudo=True)
@@ -421,7 +421,7 @@ async def get_blacklist(_, message: Message, lang):
 """export"""
 
 
-@app.on_message(command('export') & filters.group)
+@app.on_message(command('استخراج') & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -444,7 +444,7 @@ async def export_queue(_, message: Message, lang):
 """import"""
 
 
-@app.on_message(command('import') & filters.group)
+@app.on_message(command('اضافه') & filters.group)
 @register
 @language
 @check(blacklist=True)
@@ -502,7 +502,7 @@ async def import_queue(_, message: Message, lang):
 """playlist"""
 
 
-@app.on_message(command('playlist') & filters.group)
+@app.on_message(command('القائمه') & filters.group)
 @register
 @language
 @check(blacklist=True)
