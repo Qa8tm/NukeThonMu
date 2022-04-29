@@ -127,7 +127,7 @@ python(3) main.py
 ## الفارات 
 VARIABLE | DESCRIPTION | REQUIRED/OPTIONAL
 ------------ | ------------ | -------------
-SESSION | Pyrogram string session. (run `python(3) session.py` or [Generate Session String](https://replit.com/@kursadHD/Pyrogram-String-Session-Generator) ) | Required
+SESSION | كودد بايروكرام. (run `python(3) session.py` or [Generate Session String](https://replit.com/@kursadHD/Pyrogram-String-Session-Generator) ) | مهم
 API_ID | ايبي ايدي  (من https://my.telegram.org) | مهم
 API_HASH | ايبيهاش  (من https://my.telegram.org) | مهم
 SUDO | ايدي الادمن (اذا كان اكثر من ادمن ضع مسافه ثم الايدي الاخر) | اختياري (الاعتيادي: ايدي البوت)
