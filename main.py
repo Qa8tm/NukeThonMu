@@ -39,7 +39,7 @@ async def start(_, message: Message, lang):
 """ping"""
 
 
-@app.on_message(command('بنك',"بنق"))
+@app.on_message(command('بنك'))
 async def ping(_, message: Message):
     await message.reply_text(f'`{await tgcalls.ping}ms`')
 
