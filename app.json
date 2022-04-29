@@ -1,6 +1,6 @@
 {
-    "name": "TgMusicBot",
-    "description": "TgMusicBot is a telegram userbot for playing songs in telegram voice calls based on Pyrogram and PyTgCalls.",
+    "name": "NukeThon MusicBot",
+    "description": "NukeThon MusicBot is a telegram userbot for playing songs in telegram voice calls based on Pyrogram and PyTgCalls.",
     "keywords": [
         "telegram",
         "userbot",
@@ -9,50 +9,32 @@
         "pytgcalls",
         "tgvcbot"
     ],
-    "repository": "https://github.com/kursadHD/TgMusicBot",
+    "repository": "https://github.com/Qa8tm/NukeThonMu",
     "stack": "container",
     "env": {
         "SESSION": {
-            "description": "Pyrogram string session. (run `python(3) session.py` or generate it from https://replit.com/@kursadHD/Pyrogram-String-Session-Generator)",
+            "description": "كود البايروكرام (run `python(3) session.py` or generate it from https://replit.com/@kursadHD/Pyrogram-String-Session-Generator)",
             "required": true
         },
         "API_ID": {
-            "description": "Telegram api id (get from https://my.telegram.org)",
+            "description": "ايبي ايدي (get from https://my.telegram.org)",
             "required": true
         },
         "API_HASH": {
-            "description": "Telegram api hash (get from https://my.telegram.org)",
+            "description": "ايبي هاش (get from https://my.telegram.org)",
             "required": true
         },
         "SUDO": {
-            "description": "Sudo user ids (separate with space if more than one sudo)",
+            "description": "ايديك  (اذا اكو اكثر من ادمن خلي مسافه وبعدين الايدي الثاني)",
             "required": false
-        },
-        "SPOTIFY_CLIENT_ID": {
-            "description": "Spotify client id (get from https://developer.spotify.com/dashboard/applications)",
-            "required": false
-        },
-        "SPOTIFY_CLIENT_SECRET": {
-            "description": "Spotify client secret (get from https://developer.spotify.com/dashboard/applications)",
-            "required": false
-        },
-        "LOG_LEVEL": {
-            "description": "Log level (debug / info / error)",
-            "required": false,
-            "value": "error"
-        },
-        "PREFIX": {
-            "description": "Bot prefixes (separate with space)",
-            "required": false,
-            "value": "!"
         },
         "DEFAULT_LANG": {
-            "description": "Default language for groups (tr / en)",
+            "description": "خليها على (en)",
             "required": false,
-            "value": "tr"
+            "value": "en"
         },
         "DEFAULT_STREAM_MODE": {
-            "description": "Default stream mode for groups (audio / video)",
+            "description": "وضع الكروبات اذا تريد صوت اختار (audio) و اذا تريد فيديو اختار (video) ننصح باختيار audio (audio / video)",
             "required": false,
             "value": "audio"
         }
