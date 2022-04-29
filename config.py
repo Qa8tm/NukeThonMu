@@ -14,8 +14,8 @@ class Config:
         self.SUDO: list = [int(id) for id in os.environ.get(
             'SUDO', ' ').split() if id.isnumeric()]
         if not self.SESSION or not self.API_ID or not self.API_ID:
-            print('Error: SESSION, API_ID and API_HASH is required.'
-                  'Please check your config.env file.')
+            print('خطأ بايروكرام, API_ID و API_HASH مهمين.'
+                  'تأكد من ملف config.env file.')
             quit(0)
         self.SPOTIFY: bool = False
         self.SPOTIFY_CLIENT_ID: str = os.environ.get('SPOTIFY_CLIENT_ID', None)
@@ -31,7 +31,7 @@ class Config:
         else:
             self.LOG_LEVEL = logging.ERROR
         self.PREFIXES: list = os.environ.get('PREFIX', '!').split()
-        self.DEFAULT_LANG: str = os.environ.get('DEFAULT_LANG', 'tr').lower()
+        self.DEFAULT_LANG: str = os.environ.get('DEFAULT_LANG', 'en').lower()
         self.DEFAULT_STREAM_MODE: str = 'audio' if (os.environ.get(
             'DEFAULT_STREAM_MODE', 'audio').lower() == 'audio') else 'video'
 
